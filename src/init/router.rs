@@ -2,8 +2,7 @@ use axum::{routing::{get, post}, Router};
 use crate::controller;
 
 pub fn init_router() -> Router {
-    let app = Router::new()
-        .merge(user_router());
+    let app = Router::new().merge(user_router());
     return app;
 }
 

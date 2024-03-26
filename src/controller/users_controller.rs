@@ -1,9 +1,10 @@
-use axum::http::StatusCode;
-use axum::Json;
 use crate::entity::{CreateUser, User};
-use crate::comm::{SuccessResp};
+use crate::comm::SuccessResp;
 use crate::service;
 use crate::service::create_users;
+use axum::http::StatusCode;
+use axum::Json;
+
 
 pub async fn users() -> Json<SuccessResp<Vec<User>>> {
     return Json(SuccessResp {
